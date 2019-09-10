@@ -1,0 +1,23 @@
+---
+- hosts: localhost
+  vars:
+    servers:
+      - name: 10.10.10.10
+        protocol: tcp
+        ports:
+          - 22
+          - 80
+          - 443
+          - 2222
+      - name: 10.1.1.1
+        protocol: udp
+        ports:
+          - 135
+          - 139
+      - name: 10.1.1.10
+        protocol: tcp
+        ports:
+          - 81
+          - 2201
+  roles:
+    - salimchehab.check_ports

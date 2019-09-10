@@ -1,0 +1,8 @@
+---
+# tasks file for salimchehab.check_ports
+
+- name: copy "{{ script_template }}" script template to "{{ script_file_path }}"
+  template:
+    src: "{{ script_template }}"
+    dest: "{{ script_file_path }}"
+
