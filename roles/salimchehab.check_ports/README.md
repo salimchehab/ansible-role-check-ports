@@ -20,7 +20,7 @@ Role Variables
 
 The defaults contain the below variables to indicate where the generated script shall be placed:
 
-    script_base_directory: "/tmp"
+    script_base_directory: "."
     script_file_path: "{{ script_base_directory }}/check_ports.sh"
     script_template: "check_ports.sh.j2"
 
