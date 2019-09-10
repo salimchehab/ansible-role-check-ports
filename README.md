@@ -17,6 +17,26 @@ I tested this on 3 Vagrant machines that were running. I opened some ports and r
 
 Example playbook is [here](check_ports.yml).
 
+Playbook output:
+
+    $ ansible-playbook check_ports.yml -v 
+    No config file found; using defaults
+     [WARNING]: No inventory was parsed, only implicit localhost is available
+    
+     [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+    
+    
+    PLAY [localhost] **************************************************************************************************************************************************
+    
+    TASK [Gathering Facts] ********************************************************************************************************************************************
+    ok: [localhost]
+    
+    TASK [salimchehab.check_ports : copy "check_ports.sh.j2" script template to "./check_ports.sh"] *******************************************************************
+    changed: [localhost] => {"changed": true, "checksum": "a1f089b4441a47fd94ab239c04b6d7b6f6567c8f", "dest": "./check_ports.sh", "gid": 20, "group": "staff", "md5sum": "9fab4a4a72a0f3b7e33334377bd79c70", "mode": "0644", "owner": "salimchehab", "size": 645, "src": "/Users/salimchehab/.ansible/tmp/ansible-tmp-1568152316.78042-281325694139113/source", "state": "file", "uid": 501}
+    
+    PLAY RECAP ********************************************************************************************************************************************************
+    localhost                  : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
 Generated bash script is [here](check_ports.sh).
 
 Bash script output:
